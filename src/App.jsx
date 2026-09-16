@@ -27,7 +27,7 @@ function App() {
 
   /* --- ESTADOS SECCIÓN 3: PERFIL --- */
   const [perfilNombre, setPerfilNombre] = useState('Usuario Demo')
-  const [perfilBio, setPerfilBio] = useState('Desarrollador Full-Stack')
+  const [perfilBio, setPerfilBio] = useState('Ingeniero de Software - Soto Dev')
   const [perfilEditando, setPerfilEditando] = useState(false)
   const [perfilMensaje, setPerfilMensaje] = useState('')
 
@@ -38,7 +38,7 @@ function App() {
       setLoginMensaje('⚠️ Completa todos los campos.')
       return
     }
-    setLoginMensaje('✅ Inicio de sesión exitoso.')
+    setLoginMensaje(' Bienvenido al sistema, sesión iniciada por Soto. :)')
     setLoginEmail('')
     setLoginPassword('')
   }
@@ -50,8 +50,8 @@ function App() {
       setRegMensaje('⚠️ Todos los campos son obligatorios.')
       return
     }
-    if (regPassword.length < 6) {
-      setRegMensaje('⚠️ La contraseña debe tener al menos 6 caracteres.')
+    if (regPassword.length < 8) {
+  setRegMensaje(' Seguridad Soto: La contraseña exige mínimo 8 caracteres.')
       return
     }
     setRegMensaje(`✅ Usuario "${regNombre}" registrado correctamente.`)
@@ -102,7 +102,7 @@ function App() {
         <div className="header-contenido">
           <div className="header-logo">
             <span className="header-logo-icono">◆</span>
-            <h1>Sistema Oficial - Proyecto Integrador</h1>
+            <h1>Sistema Oficial - Proyecto Integrador: Soto</h1>
           </div>
           <div className="header-estado">
             <span className={`estado-indicador ${sistemaActivo ? 'activo' : 'inactivo'}`} />
@@ -159,9 +159,7 @@ function App() {
                   onChange={(e) => setLoginPassword(e.target.value)}
                 />
               </div>
-              <button className="btn-primario" type="submit">
-                Ingresar
-              </button>
+              <button className="btn-primario" type="submit">Acceder (Soto)</button>
             </form>
             {loginMensaje && (
               <p className="mensaje-feedback">{loginMensaje}</p>
@@ -218,9 +216,7 @@ function App() {
                   onChange={(e) => setRegPassword(e.target.value)}
                 />
               </div>
-              <button className="btn-primario" type="submit">
-                Registrarse
-              </button>
+              <button className="btn-primario" type="submit">Crear cuenta Soto</button>
             </form>
             {regMensaje && (
               <p className="mensaje-feedback">{regMensaje}</p>
@@ -298,7 +294,7 @@ function App() {
                       setPerfilMensaje('')
                     }}
                   >
-                    Editar Perfil
+                    Modificar Datos (Soto)
                   </button>
                 </div>
               )}
