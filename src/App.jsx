@@ -27,7 +27,7 @@ function App() {
 
   /* --- ESTADOS SECCIÓN 3: PERFIL --- */
   const [perfilNombre, setPerfilNombre] = useState('Usuario Demo')
-  const [perfilBio, setPerfilBio] = useState('Desarrollador Full-Stack')
+  const [perfilBio, setPerfilBio] = useState('DevOps & Cloud Engineer - Marcos')
   const [perfilEditando, setPerfilEditando] = useState(false)
   const [perfilMensaje, setPerfilMensaje] = useState('')
 
@@ -298,7 +298,7 @@ function App() {
                       setPerfilMensaje('')
                     }}
                   >
-                    Editar Perfil
+                    Editar Datos de Marcos
                   </button>
                 </div>
               )}
