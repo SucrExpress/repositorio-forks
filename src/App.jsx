@@ -102,7 +102,7 @@ function App() {
         <div className="header-contenido">
           <div className="header-logo">
             <span className="header-logo-icono">◆</span>
-            <h1>Sistema Oficial - Proyecto Integrador</h1>
+            <h1>Sistema Oficial - Proyecto Integrador: Soto</h1>
           </div>
           <div className="header-estado">
             <span className={`estado-indicador ${sistemaActivo ? 'activo' : 'inactivo'}`} />
