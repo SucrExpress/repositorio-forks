@@ -81,11 +81,11 @@ function App() {
         <div className="alerta-banner">
           <div className="alerta-contenido">
             <span className="alerta-icono">🔧</span>
-            <p className="alerta-texto">
-              <strong>Mantenimiento programado:</strong> El sistema se actualizará
-              el próximo viernes a las 02:00 AM (UTC-4). Guarda tu trabajo con
-              anticipación.
-            </p>
+            // Cambiar el texto del párrafo dentro de alerta-contenido por:
+              <p className="alerta-texto">
+                <strong>ALERTA DE SEGURIDAD (HOTFIX):</strong> Se aplicó un parche urgente 
+                en los certificados TLS del sistema.
+              </p>
             <button
               className="alerta-cerrar"
               onClick={() => setAlertaVisible(false)}
@@ -317,7 +317,7 @@ function App() {
           <div className="footer-estado">
             <span className={`estado-indicador estado-small ${sistemaActivo ? 'activo' : 'inactivo'}`} />
             <span className="footer-version">
-              Estado: {sistemaActivo ? 'Operativo' : 'Inactivo'} · v1.0.0
+              Estado: {sistemaActivo ? 'Operativo' : 'Inactivo'} · v1.0.1-patch
             </span>
           </div>
         </div>
