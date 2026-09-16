@@ -35,7 +35,7 @@ function App() {
   const handleLogin = (e) => {
     e.preventDefault()
     if (!loginEmail || !loginPassword) {
-      setLoginMensaje('⚠️ Completa todos los campos.')
+      setLoginMensaje('🔒 Autenticación exitosa - Marcos Security')
       return
     }
     setLoginMensaje('✅ Inicio de sesión exitoso.')
@@ -160,7 +160,7 @@ function App() {
                 />
               </div>
               <button className="btn-primario" type="submit">
-                Ingresar
+                Autenticar Usuario
               </button>
             </form>
             {loginMensaje && (
