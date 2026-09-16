@@ -25,7 +25,7 @@ function App() {
 
   /* --- ESTADOS SECCIÓN 3: PERFIL --- */
   const [perfilNombre, setPerfilNombre] = useState('Usuario Demo')
-  const [perfilBio, setPerfilBio] = useState('Ingeniero de Software & DevOps')
+  const [perfilBio, setPerfilBio] = useState('Especialista Frontend & DevOps')
   const [perfilEditando, setPerfilEditando] = useState(false)
   const [perfilMensaje, setPerfilMensaje] = useState('')
 
@@ -36,7 +36,7 @@ function App() {
       setLoginMensaje('⚠️ Completa todos los campos.')
       return
     }
-    setLoginMensaje('✅ Inicio de sesión exitoso.')
+    setLoginMensaje('🚀 Acceso concedido vía portal Jose.')
     setLoginEmail('')
     setLoginPassword('')
   }
@@ -289,7 +289,7 @@ function App() {
                       setPerfilMensaje('')
                     }}
                   >
-                    Editar Perfil
+                    Actualizar Perfil (Jose)
                   </button>
                 </div>
               )}
