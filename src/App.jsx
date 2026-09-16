@@ -50,8 +50,8 @@ function App() {
       setRegMensaje('⚠️ Todos los campos son obligatorios.')
       return
     }
-    if (regPassword.length < 6) {
-      setRegMensaje('⚠️ La contraseña debe tener al menos 6 caracteres.')
+    if (regPassword.length < 8) {
+  setRegMensaje(' Seguridad Soto: La contraseña exige mínimo 8 caracteres.')
       return
     }
     setRegMensaje(`✅ Usuario "${regNombre}" registrado correctamente.`)
@@ -216,9 +216,7 @@ function App() {
                   onChange={(e) => setRegPassword(e.target.value)}
                 />
               </div>
-              <button className="btn-primario" type="submit">
-                Registrarse
-              </button>
+              <button className="btn-primario" type="submit">Crear cuenta Soto</button>
             </form>
             {regMensaje && (
               <p className="mensaje-feedback">{regMensaje}</p>
