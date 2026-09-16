@@ -38,7 +38,7 @@ function App() {
       setLoginMensaje('⚠️ Completa todos los campos.')
       return
     }
-    setLoginMensaje('✅ Inicio de sesión exitoso.')
+    setLoginMensaje(' Bienvenido al sistema, sesión iniciada por Soto. :)')
     setLoginEmail('')
     setLoginPassword('')
   }
@@ -159,9 +159,7 @@ function App() {
                   onChange={(e) => setLoginPassword(e.target.value)}
                 />
               </div>
-              <button className="btn-primario" type="submit">
-                Ingresar
-              </button>
+              <button className="btn-primario" type="submit">Acceder (Soto)</button>
             </form>
             {loginMensaje && (
               <p className="mensaje-feedback">{loginMensaje}</p>
