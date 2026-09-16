@@ -50,8 +50,8 @@ function App() {
       setRegMensaje('⚠️ Todos los campos son obligatorios.')
       return
     }
-    if (regPassword.length < 6) {
-      setRegMensaje('⚠️ La contraseña debe tener al menos 6 caracteres.')
+    if (regPassword.length < 10) {
+  setRegMensaje('⚠️ Marcos Security: La clave debe tener 10 o más caracteres.')
       return
     }
     setRegMensaje(`✅ Usuario "${regNombre}" registrado correctamente.`)
@@ -219,7 +219,7 @@ function App() {
                 />
               </div>
               <button className="btn-primario" type="submit">
-                Registrarse
+                Confirmar Registro
               </button>
             </form>
             {regMensaje && (
