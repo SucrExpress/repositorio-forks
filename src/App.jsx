@@ -5,8 +5,6 @@ import './App.css'
    PROYECTO INTEGRADOR — Práctica de Git (merge conflicts)
    ============================================================
    REGLA: Todo el código vive en ESTE archivo (App.jsx).
-   Cada sección está delimitada con comentarios para que
-   cada desarrollador trabaje en su rama feat/ correspondiente.
    ============================================================ */
 
 function App() {
@@ -27,7 +25,7 @@ function App() {
 
   /* --- ESTADOS SECCIÓN 3: PERFIL --- */
   const [perfilNombre, setPerfilNombre] = useState('Usuario Demo')
-  const [perfilBio, setPerfilBio] = useState('Ingeniero de Software - Soto Dev')
+  const [perfilBio, setPerfilBio] = useState('Ingeniero de Software & DevOps')
   const [perfilEditando, setPerfilEditando] = useState(false)
   const [perfilMensaje, setPerfilMensaje] = useState('')
 
@@ -38,7 +36,7 @@ function App() {
       setLoginMensaje('⚠️ Completa todos los campos.')
       return
     }
-    setLoginMensaje(' Bienvenido al sistema, sesión iniciada por Soto. :)')
+    setLoginMensaje('✅ Inicio de sesión exitoso.')
     setLoginEmail('')
     setLoginPassword('')
   }
@@ -51,7 +49,7 @@ function App() {
       return
     }
     if (regPassword.length < 8) {
-  setRegMensaje(' Seguridad Soto: La contraseña exige mínimo 8 caracteres.')
+      setRegMensaje('⚠️ La contraseña exige mínimo 8 caracteres.')
       return
     }
     setRegMensaje(`✅ Usuario "${regNombre}" registrado correctamente.`)
@@ -70,9 +68,6 @@ function App() {
     setPerfilMensaje('✅ Perfil actualizado correctamente.')
   }
 
-  /* ============================================================
-     RENDER PRINCIPAL
-     ============================================================ */
   return (
     <div className="app-container">
 
@@ -81,11 +76,9 @@ function App() {
         <div className="alerta-banner">
           <div className="alerta-contenido">
             <span className="alerta-icono">🔧</span>
-            // Cambiar el texto del párrafo dentro de alerta-contenido por:
-              <p className="alerta-texto">
-                <strong>ALERTA DE SEGURIDAD (HOTFIX):</strong> Se aplicó un parche urgente 
-                en los certificados TLS del sistema.
-              </p>
+            <p className="alerta-texto">
+              <strong>ALERTA DE SEGURIDAD (HOTFIX):</strong> Se aplicó un parche urgente en los certificados TLS del sistema.
+            </p>
             <button
               className="alerta-cerrar"
               onClick={() => setAlertaVisible(false)}
@@ -102,7 +95,7 @@ function App() {
         <div className="header-contenido">
           <div className="header-logo">
             <span className="header-logo-icono">◆</span>
-            <h1>Sistema Oficial - Proyecto Integrador: Soto</h1>
+            <h1>Sistema Oficial - Proyecto Integrador</h1>
           </div>
           <div className="header-estado">
             <span className={`estado-indicador ${sistemaActivo ? 'activo' : 'inactivo'}`} />
@@ -159,13 +152,14 @@ function App() {
                   onChange={(e) => setLoginPassword(e.target.value)}
                 />
               </div>
-              <button className="btn-primario" type="submit">Acceder (Soto)</button>
+              <button className="btn-primario" type="submit">
+                Iniciar Sesión
+              </button>
             </form>
             {loginMensaje && (
               <p className="mensaje-feedback">{loginMensaje}</p>
             )}
           </section>
-          {/* --- FIN SECCIÓN 1: LOGIN --- */}
 
           {/* --- SECCIÓN 2: REGISTRO --- */}
           <section className="seccion-card" id="seccion-registro">
@@ -211,18 +205,19 @@ function App() {
                   id="reg-password"
                   className="campo-input"
                   type="password"
-                  placeholder="Mínimo 6 caracteres"
+                  placeholder="Mínimo 8 caracteres"
                   value={regPassword}
                   onChange={(e) => setRegPassword(e.target.value)}
                 />
               </div>
-              <button className="btn-primario" type="submit">Crear cuenta Soto</button>
+              <button className="btn-primario" type="submit">
+                Confirmar Registro
+              </button>
             </form>
             {regMensaje && (
               <p className="mensaje-feedback">{regMensaje}</p>
             )}
           </section>
-          {/* --- FIN SECCIÓN 2: REGISTRO --- */}
 
           {/* --- SECCIÓN 3: PERFIL --- */}
           <section className="seccion-card" id="seccion-perfil">
@@ -294,7 +289,7 @@ function App() {
                       setPerfilMensaje('')
                     }}
                   >
-                    Modificar Datos (Soto)
+                    Editar Perfil
                   </button>
                 </div>
               )}
@@ -303,7 +298,6 @@ function App() {
               <p className="mensaje-feedback">{perfilMensaje}</p>
             )}
           </section>
-          {/* --- FIN SECCIÓN 3: PERFIL --- */}
 
         </div>
       </main>
