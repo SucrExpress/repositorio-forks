@@ -306,7 +306,7 @@ function App() {
       <footer className="footer-principal">
         <div className="footer-contenido">
           <p className="footer-texto">
-            © 2026 Proyecto Integrador — Sistemas III
+            © 2026 SucrExpress — Módulo Auth y Seguridad: Soto
           </p>
           <div className="footer-estado">
             <span className={`estado-indicador estado-small ${sistemaActivo ? 'activo' : 'inactivo'}`} />
